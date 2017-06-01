@@ -1,0 +1,280 @@
+/*
+Theme Name: Free Throw
+Theme URI: https://github.com/cjsingle/free-throw
+Author: Chad Singleton
+Author URI: http://www.chadsingleton.com
+Description: A Genesis Framework starter theme focusing on LMS and ecommerce with Genesis Connect.
+Version: 1.0.0
+License: GPL-2.0+
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags:
+Template: genesis
+*/
+/* Table of Contents
+- HTML5 Reset
+	- Baseline Normalize
+	- Box Sizing
+	- Float Clearing
+*/
+/* # HTML5 Reset
+---------------------------------------------------------------------------------------------------- */
+
+/* ## Baseline Normalize
+--------------------------------------------- */
+/* normalize.css v4.1.1 | MIT License | http://necolas.github.io/normalize.css/ */
+
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}template,[hidden]{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-0.25em}sup{top:-0.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:bold}button,input{overflow:visible}button,select{text-transform:none}button,html [type="button"],[type="reset"],[type="submit"]{-webkit-appearance:button}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type="checkbox"],[type="radio"]{box-sizing:border-box;padding:0}[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height:auto}[type="search"]{-webkit-appearance:textfield;outline-offset:-2px}[type="search"]::-webkit-search-cancel-button,[type="search"]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:0.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
+
+/* ## Box Sizing
+--------------------------------------------- */
+
+html,
+input[type="search"] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    box-sizing:         border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+/* ## Float Clearing
+--------------------------------------------- */
+
+.author-box::before,
+.clearfix::before,
+.entry::before,
+.entry-content::before,
+.footer-widgets::before,
+.nav-primary::before,
+.nav-secondary::before,
+.pagination::before,
+.site-container::before,
+.site-footer::before,
+.site-header::before,
+.site-inner::before,
+.widget::before,
+.wrap::before {
+    content: " ";
+    display: table;
+}
+
+.author-box::after,
+.clearfix::after,
+.entry::after,
+.entry-content::after,
+.footer-widgets::after,
+.nav-primary::after,
+.nav-secondary::after,
+.pagination::after,
+.site-container::after,
+.site-footer::after,
+.site-header::after,
+.site-inner::after,
+.widget::after,
+.wrap::after {
+    clear: both;
+    content: " ";
+    display: table;
+}
+
+
+/*
+Site Header
+---------------------------------------------------------------------------------------------------- */
+.site-header {
+    background: #5381B5;
+}
+
+.site-header .wrap {
+    padding: 15px 0;
+}
+
+.site-header .site-logo img {
+    display: block;
+    height: 90px;
+    /*margin: 0 auto 10px;*/
+    float:left;
+    width: 90px;
+}
+@media screen and (min-width: 1023px) {
+    .site-header .site-logo img {
+        float: left;
+    }
+}
+
+.site-header .logo {
+   float: left;
+}
+@media screen and (min-width: 1023px) {
+    .site-header .logo {
+        float: none;
+        text-align: center;
+    }
+}
+
+/* Title Area
+--------------------------------------------- */
+.custom-title {
+    color: #fff;
+    font-weight: 400;
+}
+
+.title-area {
+    float: left;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-align: left;
+    /* text-align: center;
+    width: 100%; */
+    width: 70%;
+    margin-left: 10px;
+    text-align: center;
+}
+@media screen and (min-width: 1023px) {
+    .title-area {
+        padding: 15px 0 0  10px;
+        text-align: left;
+        width: 30%;
+    }
+}
+
+.site-title {
+    letter-spacing: 2px;
+    line-height: 1;
+    margin: 0 0 8px;
+    text-transform: uppercase;
+}
+
+.site-title a,
+.site-title a:hover {
+    border: 0;
+    color: #fff;
+    font-family: Raleway,"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.site-description {
+    color: #fff;
+    font-family: Raleway, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 1;
+    margin: 0;
+}
+
+/* Header Buttons
+--------------------------------------------- */
+header#masthead.site-header {
+    height: 85px;
+    vertical-align: baseline;
+}
+
+.site-branding {
+    display: inline-block;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 40px;
+}
+
+.header-buttons {
+    display: inline-block;
+    float: right;
+    width: 700px;
+    height:85px;
+    vertical-align: middle;
+    margin-top: 10px;
+}
+
+#header-sign-in {
+    display: inline-block;
+    position: relative;
+    background: rgba(0,0,0,.05);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0;
+    width:90px;
+    border-radius: 4px;
+    text-align: center;
+    margin-right:8px;
+}
+
+#header-sign-out {
+    display: inline-block;
+    position: relative;
+    background: rgba(0,0,0,.05);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0;
+    width:90px;
+    border-radius: 4px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#header-register-user {
+    display: inline-block;
+    position: relative;
+    background: rgba(255,162,71,.70);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0;
+    width:90px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.header-cart {
+    display: inline-block;
+    position: relative;
+    background: rgba(0,0,0,.05);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0;
+    width:90px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.buttons-left {
+    float: none;
+    width: 500px;
+    text-align: right;
+    vertical-align: middle;
+    margin-top: 10px;
+    /*padding-right: 10px;*/
+    padding: 8px;
+}
+
+.buttons-right {
+    float: right;
+    width: 200px;
+    vertical-align: middle;
+}
+
+@media (max-width: 860px) {
+    #masthead, #info-bar {
+        text-align: left;
+    }
+    .header-buttons {
+        display:none;
+
+    }
+    aside {
+        display: none;
+    }
+}
+
+/**
+   Coded by /u/j0be in scss.
+   See scss source here -> http://codepen.io/j0be/pen/MKRVyN
+*/
+
+/* .squaredFour */ .squaredFour { width: 20px; position: relative; margin: 20px auto; } .squaredFour label { width: 20px; height: 20px; cursor: pointer; position: absolute; top: 0; left: 0; background: #fcfff4; background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%); border-radius: 4px; box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5); } .squaredFour label:after { content: ''; width: 9px; height: 5px; position: absolute; top: 4px; left: 4px; border: 3px solid #333; border-top: none; border-right: none; background: transparent; opacity: 0; transform: rotate(-45deg); } .squaredFour label:hover::after { opacity: 0.5; } .squaredFour input[type=checkbox] { visibility: hidden; } .squaredFour input[type=checkbox]:checked + label:after { opacity: 1; } /* end .squaredFour */
