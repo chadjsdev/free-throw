@@ -71,23 +71,27 @@ add_action( 'genesis_header_right', 'ft_site_login' );
  * @return string 		HTML for site logo/image.
  */
 function ft_site_login() { ?>
-    <div class="header-buttons">
-        <form>
-            <div class="buttons-left">
-                <input type="text" size="20" />
-                <input type="password" size="20" />
-                <input type="checkbox" size="10px"/>
-            </div>
-            <div class="buttons-right">
-                <a href="#" id="header-sign-in">
-                    <i class="fa fa-sign-in" aria-hidden="true"></i>
-                    <div class="header-sign-in-text">Sign In</div></a>
-                <a href="https://www.cpuhelpdesign.com/register" id="header-register-user">
-                    <i class="fa fa-user-plus" aria-hidden="true"></i>
-                    <div class="header-register-text">Register</div></a>
-            </div>
+    <div class="login-form">
+        <form name="loginform" id="loginform" action="https://www.cpuhelpdesign.com/wp-login.php" method="post">
+            <table cellspacing="0" role="presentation">
+                <tr>
+                    <td>
+                        <label for="email">Email</label></td>
+                    <td><label for="pass">Password</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="log" id="user_login" class="input" value="" size="20" /></td>
+                    <td><input type="password" name="pwd" id="user_pass" class="input" value="" size="20" /></td>
+                    <td><input type="submit" name="wp-submit" id="wp-submit" class="button button-primary" value="Log In" />
+                        <input type="hidden" name="redirect_to" value="https://www.cpuhelpdesign.com/" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <div><label><input name="rememberme" type="checkbox" id="rememberme" value="forever" /> Remember Me</label></div></td>
+                </tr>
+            </table>
         </form>
     </div>
     <?php
 }
-
