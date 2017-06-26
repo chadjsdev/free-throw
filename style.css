@@ -90,7 +90,9 @@ Site Header
     background: #5381B5;
 }
 
-.site-header .wrap {
+.wrap {
+    width: 960px;
+    margin: 0 auto;
 }
 
 .site-header .site-logo img {
@@ -108,7 +110,12 @@ Site Header
 --------------------------------------------- */
 .custom-title {
     color: #fff;
+    font-family: Raleway, sans-serif;
+    font-size: 20px;
     font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 1;
+    margin: 0;
 }
 
 .title-area {
@@ -212,9 +219,6 @@ header#masthead.site-header {
     width:90px;
     border-radius: 4px;
     text-align: center;
-}
-
-.buttons-left {
 }
 
 .widget-area.header-widget-area {

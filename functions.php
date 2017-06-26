@@ -36,6 +36,14 @@ function free_throw_setup() {
     // Add viewport meta tag for mobile browsers.
     add_theme_support( 'genesis-responsive-viewport' );
 
+    add_theme_support( 'genesis-structural-wraps', array(
+	'header',
+	'menu-primary',
+	'menu-secondary',
+	'site-inner',
+	'footer-widgets',
+	'footer',
+    ) );
 }
 
 add_action( 'genesis_header', 'ft_site_logo');
@@ -94,4 +102,20 @@ function ft_site_login() { ?>
         </form>
     </div>
     <?php
+}
+
+// Filter the title with a custom function
+add_filter('genesis_seo_title', 'ft_site_title' );
+// Add additional custom style to site header
+function ft_site_title( $title ) {
+ // Change $custom_title text as you wish
+ $custom_title = 'Computer <div class="custom-title">Help & Design</div>';
+ // Don't change the rest of this on down
+ // If we're on the front page or home page, use `h1` heading, otherwise us a `p` tag
+ $tag = ( is_home() || is_front_page() ) ? 'h1' : 'p';
+ // Compose link with title
+ $inside = sprintf( '<a href="%s" title="%s">%s</a>', trailingslashit( home_url() ), esc_attr( get_bloginfo( 'name' ) ), $custom_title );
+ // Wrap link and title in semantic markup
+ $title = sprintf ( '<%s class="site-title" itemprop="headline">%s</%s>', $tag, $inside, $tag );
+ return $title;
 }
