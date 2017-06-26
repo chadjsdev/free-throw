@@ -116,19 +116,18 @@ Site Header
     letter-spacing: 1px;
     line-height: 1;
     margin: 0;
+    display: block;
 }
 
 .title-area {
     height: 90px;
     float: left;
     text-align: center;
+    width: 150px;
 }
 
 .site-title {
     letter-spacing: 2px;
-}
-
-h1.site-title {
     margin-top: 15px;
     margin-bottom: 0;
 }
@@ -155,10 +154,6 @@ header#masthead.site-header {
     padding-top: 0;
     padding-bottom: 0;
     padding-left: 40px;
-}
-
-.header-buttons {
-
 }
 
 #header-sign-in {

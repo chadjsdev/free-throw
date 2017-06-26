@@ -28,7 +28,7 @@ function free_throw_setup() {
     // Define theme constants.
     define( 'CHILD_THEME_NAME', 'Free Throw' );
     define( 'CHILD_THEME_URL', 'http://github.com/cjsingle/free-throw' );
-    define( 'CHILD_THEME_VERSION', '1.0.3' );
+    define( 'CHILD_THEME_VERSION', '1.0.4' );
 
     // Add HTML5 markup structure.
     add_theme_support( 'html5', array( 'caption', 'comment-form', 'comment-list', 'gallery', 'search-form' ) );
@@ -109,7 +109,7 @@ add_filter('genesis_seo_title', 'ft_site_title' );
 // Add additional custom style to site header
 function ft_site_title( $title ) {
  // Change $custom_title text as you wish
- $custom_title = 'Computer <div class="custom-title">Help & Design</div>';
+ $custom_title = 'Computer <span class="custom-title">Help & Design</span>';
  // Don't change the rest of this on down
  // If we're on the front page or home page, use `h1` heading, otherwise us a `p` tag
  $tag = ( is_home() || is_front_page() ) ? 'h1' : 'p';
