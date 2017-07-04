@@ -247,3 +247,8 @@ label {
 .login-form {
     margin-top: 7px;
 }
+
+video {
+  width: 100%    !important;
+  height: auto   !important;
+}
