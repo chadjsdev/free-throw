@@ -100,6 +100,10 @@ function ft_site_login() { ?>
                 </tr>
             </table>
         </form>
+                
+    </div>
+    <div class="hamburger">
+        <a href="#" class="toggle-panel"><i class="fa fa-bars"></i></a>
     </div>
     <?php
 }
@@ -119,3 +123,26 @@ function ft_site_title( $title ) {
  $title = sprintf ( '<%s class="site-title" itemprop="headline">%s</%s>', $tag, $inside, $tag );
  return $title;
 }
+
+function ft_adding_scripts() {
+    wp_register_script('scotch_panels_script', get_stylesheet_directory_uri() . '/lib/js/scotchPanels.min.js', array('jquery'),'1.1', true);
+    wp_register_script('scotch_panels_script2', get_stylesheet_directory_uri() . '/lib/js/power.js', array('jquery'),'1.1', true);
+    wp_enqueue_script('scotch_panels_script');
+    wp_enqueue_script('scotch_panels_script2');
+    
+} 
+
+add_action( 'genesis_after', 'ft_adding_scripts', 200 );
+
+add_action( 'genesis_before_sidebar_widget_area', 'ft_scotch_panel_start' );
+function ft_scotch_panel_start() { ?>
+    <div id="scotch-panel">
+    <?php
+}
+
+add_action( 'genesis_after_sidebar_widget_area', 'ft_scotch_panel_end' );
+function ft_scotch_panel_end() { ?>
+    </div>
+    <?php
+}
+add_action( 'genesis_after_sidebar_widget_area', 'ft_scotch_panel_end', 1 );

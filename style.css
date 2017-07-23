@@ -4,7 +4,7 @@ Theme URI: https://github.com/cjsingle/free-throw
 Author: Chad Singleton
 Author URI: http://www.chadsingleton.com
 Description: A Genesis Framework starter theme focusing on LMS and ecommerce with Genesis Connect.
-Version: 1.0.5
+Version: 1.0.6
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags:
@@ -88,11 +88,6 @@ Site Header
 ---------------------------------------------------------------------------------------------------- */
 .site-header {
     background: #5381B5;
-}
-
-.wrap {
-    width: 960px;
-    margin: 0 auto;
 }
 
 .site-header .site-logo img {
@@ -251,4 +246,112 @@ label {
 video {
   width: 100%    !important;
   height: auto   !important;
+}
+
+/* # Structure and Layout
+---------------------------------------------------------------------------------------------------- */
+
+/* ## Site Containers
+--------------------------------------------- */
+
+.site-inner,
+.wrap {
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+.site-inner {
+	clear: both;
+	padding-top: 60px;
+}
+
+/* ## Column Widths and Positions
+--------------------------------------------- */
+
+/* ### Wrapping div for .content and .sidebar-primary */
+
+.content-sidebar-sidebar .content-sidebar-wrap,
+.sidebar-content-sidebar .content-sidebar-wrap,
+.sidebar-sidebar-content .content-sidebar-wrap {
+	width: 980px;
+}
+
+.content-sidebar-sidebar .content-sidebar-wrap {
+	float: left;
+}
+
+.sidebar-content-sidebar .content-sidebar-wrap,
+.sidebar-sidebar-content .content-sidebar-wrap {
+	float: right;
+}
+
+/* ### Content */
+
+.content {
+	float: right;
+	width: 780px;
+}
+
+.content-sidebar .content,
+.content-sidebar-sidebar .content,
+.sidebar-content-sidebar .content {
+	float: left;
+}
+
+.content-sidebar-sidebar .content,
+.sidebar-content-sidebar .content,
+.sidebar-sidebar-content .content {
+	width: 580px;
+}
+
+.full-width-content .content {
+	width: 100%;
+}
+
+/* ### Primary Sidebar */
+
+.sidebar-primary {
+	float: right;
+	width: 360px;
+}
+
+.sidebar-content .sidebar-primary,
+.sidebar-sidebar-content .sidebar-primary {
+	float: left;
+}
+
+/* ### Secondary Sidebar */
+
+.sidebar-secondary {
+	float: left;
+	width: 180px;
+}
+
+.content-sidebar-sidebar .sidebar-secondary {
+	float: right;
+}
+.toggle-panel { display: none; }
+.login-form {display: block;}
+
+/* # Media Queries
+---------------------------------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 48em) {
+
+	.site-inner,
+	.wrap {
+		padding-left: 5%;
+		padding-right: 5%;
+    }
+    .login-form {
+        display: none;
+    }
+    .toggle-panel { display: block}
+    .title-area {width: 150px;}
+    .hamburger {
+        float: right;
+    }
+    .widget-area.header-widget-area {
+        width:50px;
+    }
 }
