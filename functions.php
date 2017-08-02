@@ -28,7 +28,7 @@ function free_throw_setup() {
     // Define theme constants.
     define( 'CHILD_THEME_NAME', 'Free Throw' );
     define( 'CHILD_THEME_URL', 'http://github.com/cjsingle/free-throw' );
-    define( 'CHILD_THEME_VERSION', '1.0.11' );
+    define( 'CHILD_THEME_VERSION', '1.0.12' );
 
     // Add HTML5 markup structure.
     add_theme_support( 'html5', array( 'caption', 'comment-form', 'comment-list', 'gallery', 'search-form' ) );
