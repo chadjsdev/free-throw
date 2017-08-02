@@ -28,7 +28,7 @@ function free_throw_setup() {
     // Define theme constants.
     define( 'CHILD_THEME_NAME', 'Free Throw' );
     define( 'CHILD_THEME_URL', 'http://github.com/cjsingle/free-throw' );
-    define( 'CHILD_THEME_VERSION', '1.0.12' );
+    define( 'CHILD_THEME_VERSION', '1.0.13' );
 
     // Add HTML5 markup structure.
     add_theme_support( 'html5', array( 'caption', 'comment-form', 'comment-list', 'gallery', 'search-form' ) );
@@ -54,9 +54,9 @@ add_action( 'genesis_header', 'ft_site_logo');
  */
 function ft_site_logo() {
 
-    $site_logo= '<img "' . esc_attr( get_bloginfo( 'name' ) ) . ' Homepage" img src="' . get_stylesheet_directory_uri() . '/images/logo.png" class="logo" height="90" width="90" />';
+    $site_logo= '<img img src="' . get_stylesheet_directory_uri() . '/images/logo.png" class="logo" height="90" width="90" alt="' . esc_attr( get_bloginfo( 'name' ) ) . ' Homepage" />';
 
-    printf( '<div class="site-logo">%s</div>', $site_logo );
+    printf( '<div class="site-logo"><a href="%s" title="%s">%s</a></div>', get_home_url(), get_bloginfo( 'name' ), $site_logo );
 
 }
 

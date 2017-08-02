@@ -4,7 +4,7 @@ Theme URI: https://github.com/cjsingle/free-throw
 Author: Chad Singleton
 Author URI: http://www.chadsingleton.com
 Description: A Genesis Framework starter theme focusing on LMS and ecommerce with Genesis Connect.
-Version: 1.0.12
+Version: 1.0.13
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags:
@@ -371,10 +371,11 @@ video {
         margin: 0;
         height: 60px;
         letter-spacing: 1.5px;
+        margin-top: 6px;
     }
     .site-title a,
     .site-title a:hover {
-        font-size: 75%;
+        font-size: 1.5rem;
     }
     .custom-title {
         font-size: 75%;
