@@ -4,7 +4,7 @@ Theme URI: https://github.com/cjsingle/free-throw
 Author: Chad Singleton
 Author URI: http://www.chadsingleton.com
 Description: A Genesis Framework starter theme focusing on LMS and ecommerce with Genesis Connect.
-Version: 1.0.10
+Version: 1.0.11
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags:
@@ -333,10 +333,16 @@ video {
 .toggle-panel { display: none; }
 .login-form {display: block;}
 
+.scotch-panel-wrapper {
+    min-height: 100vh;
+    height: 100vh;
+}
+
 /* # Media Queries
 ---------------------------------------------------------------------------------------------------- */
 
-@media only screen and (max-width: 48em) {
+@media only screen and (max-width: 47.9em) {
+
     .header .site-header {
         height: 3.75em;
     }
@@ -344,7 +350,7 @@ video {
         margin: 0;
     }
     .site-header .site-logo {
-        width: 3.75em;
+        width: 18.75%;
     }
     .site-header .site-logo img {
         margin: 0;
@@ -353,21 +359,30 @@ video {
     }
     .title-area {
         height: 3.75em;
+        text-align: center;
+        width: 62.5%;
     }
     h1.site-title {
+        margin: 0;
+        height: 60px;
+    }
+    p.site-title {
         margin: 0;
         height: 60px;
     }
     .site-title a,
     .site-title a:hover {
         font-size: 75%;
+        letter-spacing: 75%;
     }
     .custom-title {
         font-size: 75%;
+        letter-spacing: 75%;
     }
     .widget-area.header-widget-area {
         height: 3.75em;
         margin: 0;
+        width: 18.75%;
     }
     .login-form {
         display: none;
@@ -375,17 +390,13 @@ video {
     .toggle-panel { 
         display: block
     }
-    .title-area {
-        margin: 0;
-        width: 200px;
-    }
     .hamburger {
         float: right;
         height:3.75em;
     }
     .hamburger a.toggle-panel {
         color: #fff;
-        font-size: 30px;
+        font-size: 27px;
         display: block;
         margin: 15px 15px;
     } 
@@ -393,7 +404,7 @@ video {
         display: none;
     }
     main.content {
-        width: 290px;
+        width: 100%;
     }
     .site-inner {
         padding-top: 0;
@@ -404,5 +415,9 @@ video {
     }
     h4.widget-title.widgettitle {
         color: white;
+    }
+    .site-footer {
+        padding-top: 0;
+        padding: 0 15px;
     }
 }

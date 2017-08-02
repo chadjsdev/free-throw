@@ -28,7 +28,7 @@ function free_throw_setup() {
     // Define theme constants.
     define( 'CHILD_THEME_NAME', 'Free Throw' );
     define( 'CHILD_THEME_URL', 'http://github.com/cjsingle/free-throw' );
-    define( 'CHILD_THEME_VERSION', '1.0.10' );
+    define( 'CHILD_THEME_VERSION', '1.0.11' );
 
     // Add HTML5 markup structure.
     add_theme_support( 'html5', array( 'caption', 'comment-form', 'comment-list', 'gallery', 'search-form' ) );
@@ -88,8 +88,8 @@ function ft_site_login() { ?>
                     <td><label for="pass">Password</label></td>
                 </tr>
                 <tr>
-                    <td><input type="text" name="log" id="user_login" class="input" value="" size="20" /></td>
-                    <td><input type="password" name="pwd" id="user_pass" class="input" value="" size="20" /></td>
+                    <td><input type="text" name="log" id="user_login" class="input" value="" size="15" /></td>
+                    <td><input type="password" name="pwd" id="user_pass" class="input" value="" size="15" /></td>
                     <td><input type="submit" name="wp-submit" id="wp-submit" class="button button-primary" value="Log In" />
                         <input type="hidden" name="redirect_to" value="https://www.cpuhelpdesign.com/" /></td>
                 </tr>
