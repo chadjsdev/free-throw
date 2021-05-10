@@ -10,6 +10,7 @@ Once this is completed I will open issues.
 
 WordPress LMS Platforms:
 
-https://lifterlms.com/
+https://lifterlms.com
+
 https://learndash.com
 
